@@ -1,0 +1,32 @@
+[project]
+name = "hanbit-aiagent"
+version = "1.0.0"
+description = "만들면서 배우는 AI 에이전트 개발 - 실습 코드"
+requires-python = ">=3.11"
+readme = "README.md"
+authors = [
+    { name = "공원나연", email = "uoahvu@gmail.com" }
+]
+
+dependencies = [
+    "langgraph>=1.0.0",
+    "langchain-openai>=1.0.0",
+    "langchain-community>=0.3.0",
+    "langchain-text-splitters>=1.0.0",
+    "python-dotenv>=1.1.1",
+    "openai>=2.5.0",
+    "langchain-tavily>=0.2.12",
+    "langgraph-cli[inmem]>=0.3.6",
+    "pypdf>=6.0.0",
+    "langchain-chroma>=1.0.0",
+    "beautifulsoup4>=4.13.5",
+    "supabase>=2.22.0",
+    "docx2txt>=0.9",
+    "langchain-mcp-adapters>=0.1.11",
+    "google-api-python-client>=2.187.0",
+    "google-auth-httplib2>=0.2.1",
+    "google-auth-oauthlib>=1.2.3",
+    "a2a-sdk>=0.3.11",
+    "uvicorn>=0.35.0",
+    "httpx>=0.28.1"
+]
