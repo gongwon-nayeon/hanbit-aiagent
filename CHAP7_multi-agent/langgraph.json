@@ -1,0 +1,7 @@
+{
+  "dependencies": ["./supervisor_planning_agent"],
+  "graphs": {
+    "agent": "./supervisor_planning_agent/make_graph.py:graph"
+  },
+  "env": ".env"
+}

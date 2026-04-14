@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Electric Vehicle Sales Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .chart-container {
+            width: 80%;
+            margin: auto;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Global Electric Vehicle Sales Report by Year</h1>
+
+    <div class="chart-container">
+        <canvas id="evSalesChart"></canvas>
+    </div>
+
+    <h2>Summary</h2>
+    <p>
+        According to BloombergNEF, global sales of electric vehicles are projected to reach 22 million in 2025, marking a 25% increase from 2024. China dominates these sales, making up nearly two-thirds, followed by Europe at 17% and the US at 7%.
+    </p>
+    <p>
+        Data from Virta shows that over 10 million electric vehicles were sold in 2022, a 60% increase from 2021, with more than 26 million electric cars on roads worldwide.
+    </p>
+    <p>
+        EV Volumes reports that global electric vehicle sales were 17.8 million in 2024 and are expected to increase to 21.3 million in 2025.
+    </p>
+
+    <h2>Sources</h2>
+    <ul>
+        <li><a href="https://about.bnef.com/insights/clean-transport/global-electric-vehicle-sales-set-for-record-breaking-year-even-as-us-market-slows-sharply-bloombergnef-finds/">BloombergNEF: Global Electric Vehicle Sales</a></li>
+        <li><a href="https://www.virta.global/global-electric-vehicle-market">Virta: The Global Electric Vehicle Market</a></li>
+        <li><a href="https://ev-volumes.com/">EV Volumes: Global EV Outlook</a></li>
+    </ul>
+
+    <script>
+        const ctx = document.getElementById('evSalesChart').getContext('2d');
+        const evSalesChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2019', '2020', '2021', '2022', '2024', '2025'],
+                datasets: [{
+                    label: 'Electric Vehicle Sales (in millions)',
+                    data: [2.2, 3, 6.75, 10, 17.8, 22],
+                    borderColor: 'blue',
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Sales (millions)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
