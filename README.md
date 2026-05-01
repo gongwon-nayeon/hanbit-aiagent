@@ -144,7 +144,7 @@ source .venv/bin/activate  # macOS/Linux
 uv pip install -e .
 ```
 
-**방법 2: requirements_legacy.txt 사용**
+**방법 2: requirements.txt 사용**
 ```bash
 # pip 사용
 pip install -r requirements.txt
